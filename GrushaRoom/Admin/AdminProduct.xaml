@@ -1,0 +1,76 @@
+﻿<Window x:Class="GrushaRoom.Admin.AdminProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrushaRoom.Admin"
+        mc:Ignorable="d"
+        Title="AdminProduct" Height="800" Width="335">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Введите название товара:"
+                       FontSize="14"/>
+            <TextBox BorderBrush="#00ADB5"
+                     Margin="0 5 0 5"
+                     Height="22"
+                     TextChanged="TextBox_TextChanged"/>
+            <TextBlock Text="Выберите категорию товара:" FontSize="14" Margin="0 5 0 5"/>
+            <ComboBox x:Name="cmbFiltrationCategory" SelectedIndex="0" Margin="5" SelectionChanged="cmbFiltrationCategory_SelectionChanged"/>
+            <TextBlock Text="Введите цену:"
+                       FontSize="14"
+                       Margin="0 5 0 5"/>
+            <TextBox BorderBrush="#00ADB5"
+                     x:Name="tbPrice"
+                     Height="22"
+                     TextChanged="tbPrice_TextChanged"/>
+            <TextBlock Text="Выберите изображение:"
+                       FontSize="14"
+                       Margin="0 5 0 5"/>
+            <Image Source="C:\Users\student\source\repos\GrushaRoom\GrushaRoom\logo.png" Height="110"/>
+            <Button x:Name="btnPictureView"
+                    Content="Обзор"
+                    Style="{DynamicResource ButtonOne}"/>
+            <TextBlock Text="Введите описание:"
+                       FontSize="14"
+                       FontFamily="Candara"
+                       Margin="0 5 0 5"/>
+            <TextBox x:Name="tbDescription"
+                     BorderBrush="#00ADB5"
+                     Height="22"
+                     TextChanged="tbDescription_TextChanged"/>
+            <TextBlock Text="Введите материал товара:"
+                       FontSize="14"
+                       FontFamily="Candara"
+                       Margin="0 5 0 5"/>
+            <TextBox x:Name="tbMaterial"
+                     BorderBrush="#00ADB5"
+                     Height="22"
+                     TextChanged="tbMaterial_TextChanged"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Закрыть окно" 
+                    x:Name="btnProductClose" 
+                    Style="{DynamicResource ButtonOne}" 
+                    Click="btnProductClose_Click"/>
+            <Button Content="Сохранить" 
+                    x:Name="btnProductSave" 
+                    Style="{DynamicResource ButtonOne}" 
+                    Click="btnProductSave_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <TextBlock Text="Room Interior"
+                       FontFamily="Candara"
+                       FontSize="14"/>
+            <Image Source="C:\Users\student\source\repos\GrushaRoom\GrushaRoom\logo.png"
+                   Width="50"/>
+        </StackPanel>
+    </Grid>
+</Window>

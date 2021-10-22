@@ -1,0 +1,43 @@
+﻿<Window x:Class="GrushaRoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrushaRoom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="350" Icon="logo.png">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Авторизация" FontFamily="Candara" FontSize="14"/>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Введите логин:" Height="17" Width="141" FontFamily="Candara"/>
+            <PasswordBox x:Name="txbLogin" Width="114" BorderBrush="#00ADB5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Введите пароль:" Height="17" Width="141" FontFamily="Candara"/>
+            <PasswordBox x:Name="psbPassword" Width="114" BorderBrush="#00ADB5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Повторите пароль:" Height="17" Width="141" FontFamily="Candara"/>
+            <PasswordBox x:Name="psbPasswordRepeat" Width="114" BorderBrush="#00ADB5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnLogin" Content="Войти" Click="btnEnter_Click" Style="{StaticResource ButtonOne}" />
+            <Button x:Name="btnLogout" Content="Выйти" Click="btnExit_Click" Style="{StaticResource ButtonOne}"/>
+        </StackPanel>
+    </Grid>
+</Window>
